@@ -196,12 +196,12 @@ public class Vector {
 	 *                    2) if the numeric types of the vectors do not match.
 	 */
 	public Number minDotProduct(Vector otherVector) throws Exception {
+		// copy the vectors to prevent modifying the original ones when sorting
 		Vector vec1 = new Vector(this);
 		Vector vec2 = new Vector(otherVector);
 		Arrays.sort(vec1.getVector());
 		Arrays.sort(vec2.getVector(), Collections.reverseOrder());
 		
-		// TODO replace this
 		return vec1.dotProduct(vec2);
 	}
 }
